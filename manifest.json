@@ -1,0 +1,80 @@
+{
+  "name": "eZSend",
+  "author": {
+    "name": "Henrique Balmant",
+    "email": "apps@eteg.com.br",
+    "url": "https://www.eteg.com.br/"
+  },
+  "defaultLocale": "pt",
+  "private": true,
+  "location": {
+    "support": {
+      "user_sidebar": "assets/iframe.html",
+      "ticket_sidebar": "assets/iframe.html"
+    }
+  },
+  "domainWhitelist": [
+    "www.zopim.com"
+  ],
+  "parameters": [
+    {
+      "name": "app_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "integration_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "whatsapp_namespace",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "api_token",
+      "type": "password",
+      "required": true
+    },
+    {
+      "name": "tag",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "ticket_subject",
+      "type": "text",
+      "default": "Notificação proativa criada"
+    },
+    {
+      "name": "enable_notifications_ticket_registration",
+      "type": "checkbox"
+    },
+    {
+      "name": "switchboard_integration_name",
+      "type": "text",
+      "default": "zd-agentWorkspace"
+    },
+    {
+      "name": "include_only",
+      "type": "text"
+    },
+    {
+      "name": "exclude_all",
+      "type": "text"
+    },
+    {
+      "name": "chat_nickname",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "chat_avatar",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "version": "2.0.1",
+  "frameworkVersion": "2.0"
+}

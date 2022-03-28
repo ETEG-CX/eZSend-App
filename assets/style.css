@@ -1,0 +1,160 @@
+html {
+  font: normal normal normal 15px/24px Roboto;
+  overflow: hidden;
+}
+
+body {
+  color: #012b30;
+}
+
+select {
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #03363d;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: #f5fcfc;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+td {
+  display: flex;
+  border: 1px solid;
+  font-size: 14px;
+  font-style: italic;
+  padding: 5px;
+  border-radius: 4px;
+  border-color: #D8DCDE;
+  padding: 13px 15px;
+}
+
+th {
+  text-align: left;
+  align-items: baseline;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  padding: 5px;
+}
+
+.download{
+  background-color: #03363d;
+  background-image: url('file-download-solid.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  height: 85px;
+  width: 85px;
+  float: right;
+}
+
+input[type='button'] {
+  font: normal normal normal 16px/16px Roboto;
+  border-radius: 4px;
+  color: white;
+  background-color: #1E73B8;
+  padding: 10px 40px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type='button']:disabled {
+  color: black;
+  border-radius: 4px;
+  background: #ccc;
+  padding: 10px 40px;
+  margin: 2px;
+  border: none;
+  cursor: default;
+}
+
+input[type='text'] {
+  font: normal normal normal 18px/24px Roboto;
+    margin-bottom: 15px;
+    margin-top: 11px;
+    padding: 13px 15px;
+    width: 100%;
+    background-color: #FFFFFF ;
+    border: 1px solid #D8DCDE;
+    border-radius: 4px;
+  color: #03363d;
+  display: block;
+
+}
+
+span{
+  color: #03363d;
+  padding: 5px;
+  margin: 5px 10px;
+  font-weight: bold;
+  float: right;
+}
+
+span img{
+  margin-left: 5px;
+}
+
+#setParameters {
+  margin: 5px;
+}
+
+#templateBody {
+  white-space: pre-line;
+}
+
+#foundWhatsappNumber {
+  font-size: 120%;
+  font-weight: 600;
+}
+
+.selectActionButton {
+  margin-bottom: 10px !important;
+}
+
+#createTemplate {
+  width: 219px;
+  background-color: #038153 !important;
+}
+
+#deleteTemplate {
+  width: 219px;
+  background-color: #cc3340 !important;
+  cursor:pointer
+}
+
+#deleteTemplate:disabled {
+  background-color: #ccc !important;
+  cursor: default;
+}
+
+#actionButtons{
+  height: 110px;
+  align-items: center;
+}
+
+.selectTemplate{
+  font: normal normal normal 18px/24px Roboto;
+    margin-bottom: 15px;
+    margin-top: 11px;
+    padding: 13px 15px;
+    width: 100%;
+    background-color: #FFFFFF ;
+    border: 1px solid #D8DCDE;
+    border-radius: 4px;
+}
+
+#sendButton{
+  float: right ;
+}

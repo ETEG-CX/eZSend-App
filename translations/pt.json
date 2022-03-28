@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "SunCo Proactive Notifications",
+    "short_description": "Simples aplicativo para notificações proativas no WhatsApp.",
+    "long_description": "Simples aplicativo para notificações proativas no WhatsApp, \n à partir de templates previamente cadastrados no Sunshine Conversations.",
+    "installation_instructions": "Insira suas credenciais de appId, hsmIntegrationId, namespace e as credenciais da API key.",
+    "parameters": {
+      "app_id": {
+        "label": "App ID",
+        "helpText": "Insira o App ID disponibilizado nas configurações do Sunshine Conversations."
+      },
+      "integration_id": {
+        "label": "Integration ID",
+        "helpText": "Insira o ID da integração do Sunshine Conversations com o Whatsapp. Esta informação só pode ser recuperada via API."
+      },
+      "whatsapp_namespace": {
+        "label": "Whatsapp Namespace",
+        "helpText": "Insira o namespace do Whatsapp disponibilizado pelo Sunshine Conversations."
+      },
+      "api_token": {
+        "label": "API Token",
+        "helpText": "Insira o Token de atenticação da API do Sunshine Conversations em Base64."
+      },
+      "tag": {
+        "label": "Tag do Aplicativo",
+        "helpText": "Insira a Tag(s) que deseja que o aplicativo coloque , caso seja mais de uma deve ser separada por espaço."
+      },
+      "ticket_subject": {
+        "label": "Assunto do Ticket",
+        "helpText": "Defina o assunto do ticket de referência. Sempre será adicionado o número do Whatsapp e ID da notificação no assunto. Exemplo: Notificação proativa criada - Whatsapp: {whatsapp_number} | ID: {notification_id}"
+      },
+      "enable_notifications_ticket_registration": {
+        "label": "Habilitar registro de notificações em tickets.",
+        "helpText": "Ao habilitar esta opção, um ticket será criado com todas as informações da notificação enviada."
+      },
+      "switchboard_integration_name": {
+        "label": "Nome da integração de Switchboard (Obrigatorio para notificações em ticket).",
+        "helpText": "Nome da integração de Switchboard."
+      },
+      "include_only": {
+        "label": "Filtro de inclusão (Separado por ';')",
+        "helpText": "Ao habilitar esta opção, o aplicativo somente exibirá os templates que possuam os padrões selecionados."
+      },
+      "exclude_all": {
+        "label": "Filtro de exclusão (Separado por ';')",
+        "helpText": "Ao habilitar esta opção, o aplicativo não exibirá os templates que possuam os padrões selecionados."
+      },
+      "chat_nickname": {
+        "label": "Nome que sera exibido na conversa",
+        "helpText": "Nome exibido na conversa"
+      },
+      "chat_avatar": {
+        "label": "Avatar que sera exibido na conversa",
+        "helpText": "URL do avatar exibido na conversa."
+      }
+    }
+  }
+}

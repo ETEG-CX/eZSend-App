@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7.0.21,npm/@zendeskgarden/css-utilities@4.3.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script type='text/javascript' src="services/sunco.js"></script>
+  <script type='text/javascript' src="services/zendesk.js"></script>
+  <script type='text/javascript' src="services/zaf.js"></script>
+  <script type='text/javascript' src="app.js"></script>
+  </head>
+
+<body>
+  <div id="app">
+    <div id="actionButtons">
+      <input type="button" class="selectActionButton download" id="downloadTemplates"  
+        onclick="downloadTemplateCSV()" ></input>
+      <input type="button" class="selectActionButton" id="createTemplate" value="Criar novo template"
+        onclick="createTemplate()">
+      <input type="button" class="selectActionButton" id="deleteTemplate" value="Deletar um template"
+        onclick="deleteTemplate()">    
+    </div>
+
+    <div id="sendTemplateForm">
+      <form id="sendNotifications">
+        <h2>Formulário de Envio de Templates:</h2>
+        <input class="selectTemplate" id="messageTemplateInput" list="messagesTemplates" placeholder="Selecione o template...">
+        <datalist id="messagesTemplates">
+        </datalist>
+
+        <div id="aboutWhatsappNumber">
+          <div id="missingWhatsappNumber" hidden>
+            <h2>Este usuário não possui número de WhatsApp cadastrado.</h2></br>
+            <p>Para adicionar o número de WhatsApp no Zendesk Support:
+              <li>Utilize a área de contato;</li>
+              <center><b>OU</b></center>
+              <li>Utilize um campo customizado de usuário com a chave <i>whatsapp</i>.</li></br>
+              <b>Caso ambos estejam preenchidos, o campo considerado será o da área de contato.</b>
+            </p>
+          </div>
+
+          <div>
+            <p>Esta notificação será enviada para:</p>
+            <div id="foundWhatsappNumber"></div>
+          </div>
+        </div>
+
+        <div id="showTemplate" hidden>
+          <table>
+            <tr>
+              <th>Template:</th>
+              <td id="templateName"></td>
+            </tr>
+            <tr>
+              <th>Categoria:</th>
+              <td id="templateCategory"></td>
+            </tr>
+            <tr>
+              <th>Mensagem:</th>
+              <td id="templateBody"></td>
+            </tr>
+          </table>
+
+          <div id="parameters" hidden>
+            <div id="parametersInputs">
+            </div>
+          </div>
+
+          <input type="button" id="sendButton" value="Enviar" onclick="sendNotification()"/>
+          <span id="loadingSpan" hidden>
+            Aguarde
+            <img src="./loader.gif">
+          </span>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

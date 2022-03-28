@@ -1,0 +1,12 @@
+{
+  "app": {
+    "name": "SunCo Proactive Notifications",
+    "short_description": "Simple application for proactive notifications on WhatsApp.",
+    "long_description": "Simple application for proactive notifications on WhatsApp, \n from templates previously registered on Sunshine Conversations.",
+    "installation_instructions": "Enter your appId, hsmIntegrationId, namespace and API key credentials."
+  },
+  "appText": {
+    "sendNotificationsHeader": "Formulário de Envio de Templates",
+    "messagesTemplateSelectedOption": "Selecione o template..."
+  }
+}
