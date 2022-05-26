@@ -111,6 +111,7 @@ async function loadTemplates(){
             ShowTemplateRef.hidden = false;
             SendButtonRef.hidden = false;
             TemplateNameRef.innerHTML = SelectedTemplate[0].name;
+            TemplateNameRef.dataset.language = SelectedTemplate[0].language
             TemplateCategoryRef.innerHTML = SelectedTemplate[0].category;
             TemplateBodyRef.innerHTML = ComponentBody[0].text;
     
@@ -200,9 +201,10 @@ async function sendNotification(){
     const AgentId = zendeskService.getAgent()['id'];
     const TemplateName = TemplateNameRef.innerHTML;
     const TemplateCategory = TemplateCategoryRef.innerHTML;
+    const TemplateLanguage = TemplateNameRef.dataset.language;
 
     _SetLoadding(ButtonRef, true);
-    const Response = await suncoService.sendNotification(UserId, UserPhone, AgentId, TemplateName, TemplateCategory, TemplateParams);
+    const Response = await suncoService.sendNotification(UserId, UserPhone, AgentId, TemplateName, TemplateCategory,TemplateLanguage, TemplateParams);
     _SetLoadding(ButtonRef, false);
     if(Response){
         zafService.reloadApp()

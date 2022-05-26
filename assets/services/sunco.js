@@ -49,7 +49,7 @@ class SuncoService {
         return Response
     }
 
-    async sendNotification(userId, userPhone, agentId, templateName, templateCategory, templateParams){
+    async sendNotification(userId, userPhone, agentId, templateName, templateCategory,TemplateLanguage, templateParams){
 
         const AppSettings = this._zafServiceRef.getSettings();
 
@@ -104,7 +104,7 @@ class SuncoService {
                   name: templateName,
                   language: {
                     policy: 'deterministic',
-                    code: 'pt_BR',
+                    code: TemplateLanguage,
                   },
                   components: RequestComponents,
                 },
